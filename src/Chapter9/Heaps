@@ -1,0 +1,17 @@
+Heaps maintain certain order properties
+1. In a heap T, for every position except the root, the value stored at every position is >= the value stored
+ in it's parent. So the nodes are in non-decreasing order.
+ The minimum key is stored at the root.
+ The height of the heap tree should be minimized for efficiency
+ We want a complete tree - the levels before the last should have the maximum number of nodes possible and
+ the nodes on the last level should be on the leftmost positions
+2. A heap tree storing n entries has height = floor(log n)
+
+*** Up heap bubbling ***
+When inserting a new value into the heap, we need to make sure it does not violate the tree.(must be larger than parent)
+So we make at most floor(log n) swaps to make sure the new element is in the correct place in relation to the other
+elements. Keep swapping with parent until all children have larger values than parents.
+
+*** Down heap swapping ***
+Swapping the root of the tree until the binary tree ordering property is valid. Meaning until the root of the tree is
+smaller than the children of that tree. The steps are based on the height of the tree, and hence take floor(log n) steps

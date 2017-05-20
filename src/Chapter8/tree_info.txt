@@ -1,0 +1,29 @@
+siblings = children of the same node
+external node = node that has no children. Also known as a leaf
+internal node = a node that has one or more children
+ancestor node = node u is an ancestor of node v is u=v or if u is an ancestor of the parent of v. Basically, that
+ node's parents+ and that node itself are the ancestors
+descendant node = v is a descendant of node u if u is an ancestor of v.
+edge = connection from parent to child node
+path = connection between two or more nodes
+
+depth of a node = number of ancestors of the node, other than the node itself. The root of the tree has a
+ depth of 0.
+    depth = 0
+    if p == root() {
+        return 0
+    }else{
+        1 + depth(parent(p))
+    }
+
+height of a tree = maximum of the tree depth
+
+
+*** Binary Tree Rules ***
+1. Every Node has at most two children
+2. Each node child is either a left or a right
+3. A left child precedes a right child in the order of children of the parent node.
+    i.e. in the case of integers, left is smaller than right
+
+Proper Binary Tree = a binary tree where each node has either two or zero children
+    Also referred to as a full binary tree. The opposite is known as a improper tree
